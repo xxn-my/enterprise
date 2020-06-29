@@ -38,7 +38,13 @@ ul {
   .foot {
     background-color: #f8f9fa;
 }
+.foot a:hover{
+    color: brown !important;
+}
 .active-title {
     font-weight: bold;
     background-color: seagreen;
 }
+.mb {
+    margin-bottom: 10px;
+  }
