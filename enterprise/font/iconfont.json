@@ -11,6 +11,13 @@
       "font_class": "food",
       "unicode": "e6fe",
       "unicode_decimal": 59134
+    },
+    {
+      "icon_id": "11078219",
+      "name": "TOP",
+      "font_class": "TOP",
+      "unicode": "e605",
+      "unicode_decimal": 58885
     }
   ]
 }

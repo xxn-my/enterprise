@@ -20,7 +20,7 @@
 <body>
 <!--头部-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
-  <a class="navbar-brand iconfont icon-food d-block" href="#"></a>
+  <a class="navbar-brand iconfont icon-food d-block text-success logosize" href="index.html"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -46,7 +46,7 @@
         <div class="col text-center">
             <h2 class="h2" id="title"></h2>
             <div class="des-date" id="update"></div>
-            <div><img src="" alt="" id="foodimg" class="img-fluid"></div>
+            <p id="foodimg"></p>
             <!--<div class="food-img"></div>-->
             <p id="dest" class="lead text-left"></p>
         </div>
@@ -93,13 +93,13 @@
       <img src="./dist/images/qrscan-original.png" alt="" class="mt-2">
     </div>
   </div>
-  <div class="row text-center">
+  <div class="row text-center pb-2">
     <div class="col ">版权所有&copy; xxn</div>
   </div>
 </div>
 <!--返回顶部-->
 <div class="back-to" id="toolBackTop">
-    <a title="返回顶部"  href="#top" class="back-top"></a>
+  <a href="#top" class="back-to-top"> <i class="iconfont icon-TOP" id="iconsize"></i></a>
 </div>
 
 </body>
@@ -117,18 +117,9 @@
       if (!window.HTMLPictureElement) {
         loadJS("js/ls.respimg.min.js");
       }
-        $('#wx').hover(function () {
-            $('#scanImg').show()
-        },function () {
-            $('#scanImg').hide()
-        });
-        $('.back-top').onclick = function () {
-            window.scrollTo(0,0);
-            return false;
-        }
-        var bt = $('#toolBackTop');
+      var bt = $('#toolBackTop');
         var sw = $(document.body)[0].clientWidth;
-        var limitsw = (sw - 840) / 2 - 80;  //距离右侧距离
+        var limitsw = (sw - 840) / 2 - 100;  //距离右侧距离
         if (limitsw > 0){
             limitsw = parseInt(limitsw);
             bt.css("right",limitsw/8);
@@ -142,7 +133,23 @@
                 bt.hide();
             }
         });
+        let t1 = 0;
+        let t2 = 0;
+        let timer = null; // 定时器
 
+        // scroll监听
+        document.onscroll = function() {
+          clearTimeout(timer);
+          timer = setTimeout(isScrollEnd, 1500);
+          t1 = document.documentElement.scrollTop || document.body.scrollTop;
+        }
+
+        function isScrollEnd() {
+          t2 = document.documentElement.scrollTop || document.body.scrollTop;
+          if(t2 == t1){
+            bt.hide();
+          }
+        }
     //des
         console.log(location.search.split('='));
         console.log(location.search.split('&'));
@@ -161,11 +168,12 @@
                 // console.log(res.data.length-1)
                 $('#title').html(a.title);
                 $('#update').html("发布时间："+a.date);
-                $('#foodimg').attr({'data-src':`./dist/images/news/${a.img}-original.png`,
-                      'data-srcset':`./dist/images/news/${a.img}-90.png 90w,./dist/images/news/${a.img}-180.png 180w,./dist/images/news/${a.img}-360.png 360w,./dist/images/news/${a.img}-original.png`,
-                    'alt':`./dist/images/news/${a.img}-original`,
-                    'class':"img-fluid lazyload" ,
-                    'data-sizes':"auto"})
+                $("#foodimg").html(`<img data-src="${a.img}" data-srcset="${a.imgs}" class="img-fluid lazyload newssize" data-sizes="auto" alt="...">`)
+                // $('#foodimg').attr({'data-src':`./dist/images/news/${a.img}-original.png`, 
+                //       'data-srcset':`./dist/images/news/${a.img}-90.png 90w,./dist/images/news/${a.img}-180.png 180w,./dist/images/news/${a.img}-360.png 360w,./dist/images/news/${a.img}-original.png`,
+                //      'alt':`./dist/images/news/${a.img}-original`,
+                //      'class':"img-fluid lazyload" ,
+                //      'data-sizes':"auto"})
                 $('#dest').html(a.description);
                 if(id==0){
                     $('#pre').html("无");
