@@ -57,6 +57,11 @@
   </div>
 </div>
 
+<!--返回顶部-->
+<div class="back-to" id="toolBackTop">
+  <a href="#top" class="back-to-top"> <i class="iconfont icon-TOP" id="iconsize"></i></a>
+</div>
+
 
 <!--底部-->
 <!--底部-->
@@ -126,6 +131,40 @@
       document.locateForm.field.value = company[1]
     })
 
+
+    var bt = $('#toolBackTop');
+        var sw = $(document.body)[0].clientWidth;
+        var limitsw = (sw - 840) / 2 - 100;  //距离右侧距离
+        if (limitsw > 0){
+            limitsw = parseInt(limitsw);
+            bt.css("right",limitsw/8);
+        }
+
+        $(window).scroll(function() {
+            var st = $(window).scrollTop();
+            if(st > 300){
+                bt.show();
+            }else{
+                bt.hide();
+            }
+        });
+        let t1 = 0;
+        let t2 = 0;
+        let timer = null; // 定时器
+
+        // scroll监听
+        document.onscroll = function() {
+          clearTimeout(timer);
+          timer = setTimeout(isScrollEnd, 1500);
+          t1 = document.documentElement.scrollTop || document.body.scrollTop;
+        }
+
+        function isScrollEnd() {
+          t2 = document.documentElement.scrollTop || document.body.scrollTop;
+          if(t2 == t1){
+            bt.hide();
+          }
+        }
 </script>
 </body>
 </html>
