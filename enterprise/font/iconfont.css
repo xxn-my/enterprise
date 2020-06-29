@@ -1,0 +1,21 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1593322406054'); /* IE9 */
+  src: url('iconfont.eot?t=1593322406054#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPoAAsAAAAACDgAAAObAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqERIN4ATYCJAMICwYABCAFhG0HLhscB8gOJcDAkABQAGBA/v+3afcBsV83KqbjTkcsTUjr9BA6YuKr2amH59+/nft7izCiqEWtLYk/JRKYJM3//xwz3ZoHlv+9+Ryj0iqo2qazAU03oIoWvQM5ML9h7CbKg1gMBGBCJaG1ZfvuMBKAVgSgp7LcDGNKQagJJEZEXzKwiOZAx9imcjcAzOa/Tz8yYgQ4ugkgpHNvYUXj7z/048c4xuhLEWCOpwOgDQN4QBJAADpLDR3xoSsJjzkuQQSsK5Dg7X+HgzJW+48HENAMIHAWscGMc2Ji1qkKOKoXwCmJiwC+9aoEsIV3dXFx9QwGTx7OFvmWLl6+bJN390ePpAcPurMDJ4LHBPTAypPZbodPh1Hpclp1SmJ+ZQ8f9oiqPurxY/OuR9MeJLH9j1tdfJguTTvizbbfnn4zni06pvFLm26771EvjFnAXKctIpLGLnbymL4Q6kvL1u9fHUiLKBe+0GfpGv8lKwJ8mhRN87WMZeV4P9SCvNKiPmjcrBBvpMDEJe0ODT48+MC8Ngl9NivVGM+dWO0/QnK/Qf6flRH+dMN9YExQRny+yGJ4jtxhxhI5ttvNiHZT+/RERRYP9zOH+yvbZhr+JeyZVvS1hMjWA1p83HOXWHZ7+TS+Fes8rvU459hbjb1Ht4f98mkZ7tttYmVv6ohhR2jTU9trWv8elWaYYhiITWmjZ4dVzwwhOvnUvmMiEZ8Mn5N36tqxIys1wfBneRMEop0V6J2EyZ3X0FzbsrKB15NMrdZPh8TSi671qWfHtuycoGuOxgDAMaZ4fsyf/hts+71tG+BW9M3oJAAAnoe238hZ7UyA8X0YCf5rUhHg+F+8zgZyrmzWyEHgXAR7XwIWqx0AFk+v+kp8XqKHGPnIwDEIAZ5RFFLAJoGOkyzQM2oETKJWw514UfGoTAASTBSAuNsNHFengefuJlLAvgQdX+9Azz08MFK8JnQSk0rWTJXNmmwVy4aKlRalzobUGgsCu8rlDTVmNcnmRElW7ZVWMT0lLettJdfJ6hhd7IPKMzTNJtpUpVZsKSwn19QoYr2qVMkWLaVC0+oLUlNtZXdKsSi1YJpRycw0MitRmaFElSwUdWy0sIblfr4rWbkGNczUmowOvUSmsqssX5QuRVoLZCtBXauMa6luN0i5DBqNTW5mo1LUErUUdbIa6FKI6svrVZFZaFJU9HDUK5Aq5bK1FaTML6p9uiI8xCxAygVG8hC6olgBAA==') format('woff2'),
+  url('iconfont.woff?t=1593322406054') format('woff'),
+  url('iconfont.ttf?t=1593322406054') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1593322406054#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-food:before {
+  content: "\e6fe";
+}
+

@@ -1,0 +1,44 @@
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearfix::after{
+    /*设置添加的子元素的内容为空*/
+    content: "";
+    /*设置添加的子元素为块级元素*/
+    display: block;
+    /*设置添加的子元素的高度为0*/
+    height: 0;
+    /*设置添加的子元素看不见*/
+    visibility: hidden;
+    /*给添加的子元素设置clear: both;*/
+    clear: both;
+}
+.clearfix{
+    /*兼容IE6*/
+    *zoom:1;
+}
+a {
+    text-decoration: none !important;
+    color: #ccc !important;
+}
+ul {
+    list-style: none;
+}
+.row.gutter {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .row.gutter > [class*='col-'] {
+    padding-right: 5px;
+    padding-left: 5px;
+  } 
+  .foot {
+    background-color: #f8f9fa;
+}
+.active-title {
+    font-weight: bold;
+    background-color: seagreen;
+}

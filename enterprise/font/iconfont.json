@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "431767",
+      "name": "food",
+      "font_class": "food",
+      "unicode": "e6fe",
+      "unicode_decimal": 59134
+    }
+  ]
+}
