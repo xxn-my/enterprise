@@ -11,25 +11,3 @@ a:active {
     margin: 10px 0 50px 0;
     /* height: 400px; */
 }
-/*返回顶部小标*/
-.back-to {
-    display: none;
-    bottom: 55px;
-    overflow: hidden;
-    position: fixed;
-    right: 10px;
-    z-index: 999;
-}
-.back-to .back-top {
-    width: 48px;
-    height: 48px;
-    display: inline-block;
-    background: url("../images/toTop.png");
-    float: right;
-    margin-left: 10px;
-    outline: 0 none;
-    text-indent: -9999em;
-}
-.back-to .back-top:hover {
-    background-position: -50px 0
-}
