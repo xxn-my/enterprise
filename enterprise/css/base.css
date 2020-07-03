@@ -97,5 +97,7 @@ ul {
     .logosize {
         font-size: 30px;
     }
-
+.dis {
+    cursor: none;
+}
     

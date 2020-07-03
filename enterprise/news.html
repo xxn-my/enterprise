@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/news.css">
     <title>企业站</title>
+    <style>
+      .fixHeight {
+        min-height: 90px;
+      }
+    </style>
 </head>
 <body>
 <body>
@@ -39,7 +44,7 @@
     <div class="row mb-3 gutter">
         <div class="col-6 col-sm-6 col-md-4 col-lg-4">
             <div class="card mb">
-              <p></p>
+              <div class="fixHeight"></div>
                 <!-- <img data-src="" class="card-img-top img-fluid lazyload" data-sizes="auto" alt="..."> -->
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
@@ -49,7 +54,7 @@
         </div>
         <div class="col-6 col-sm-6 col-md-4 col-lg-4">
             <div class="card mb">
-              <p></p>
+              <div class="fixHeight"></div>
               <!-- <img data-src="" class="card-img-top img-fluid lazyload" data-sizes="auto" alt="..."> -->
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
@@ -59,7 +64,7 @@
         </div>
         <div class="col-6 col-sm-6 col-md-4 col-lg-4">
             <div class="card mb">
-              <p></p>
+              <div class="fixHeight"></div>
               <!-- <img data-src="" class="card-img-top img-fluid lazyload" data-sizes="auto" alt="..."> -->
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
@@ -69,7 +74,7 @@
         </div>
         <div class="col-6 col-sm-6 col-md-4 col-lg-4">
             <div class="card mb">
-              <p></p>
+              <div class="fixHeight"></div>
               <!-- <img data-src="" class="card-img-top img-fluid lazyload" data-sizes="auto" alt="..."> -->
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
@@ -79,7 +84,7 @@
         </div>
         <div class="col-6 col-sm-6 col-md-4 col-lg-4">
             <div class="card mb">
-              <p></p>
+              <div class="fixHeight"></div>
               <!-- <img data-src="" class="card-img-top img-fluid lazyload" data-sizes="auto" alt="..."> -->
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
@@ -89,7 +94,7 @@
         </div>
         <div class="col-6 col-sm-6 col-md-4 col-lg-4">
             <div class="card mb">
-              <p></p>
+              <div class="fixHeight"></div>
               <!-- <img  class="card-img-top img-fluid lazyload" data-sizes="auto" alt="..."> -->
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
@@ -212,7 +217,7 @@
                       console.log($('.card').eq(index).find('p'))
                       //<img data-src="./dist/images/hotfood1-original.png" datasrcset="./dist/images/hotFood1-90.png 90w,./dist/images/hotfood1-180.png 180w,./dist/images/hotfood1-original.png," class="card-img-top img-fluid lazyload" alt="..." data-sizes="auto">
                         // $('.card').eq(index).find('img').prop('data-src','dist/images/news/cake1-90.png')
-                        $('.card').eq(index).find('p').html(`<img data-src="${ele.img}" data-srcset="${ele.imgs}" class="card-img-top img-fluid lazyload" data-sizes="auto" alt="...">`)
+                        $('.card').eq(index).find('.fixHeight').html(`<img src="./images/loading.jpg"  data-original="${ele.img}" data-srcset="${ele.imgs}" class="card-img-top img-fluid lazyload" data-sizes="auto" alt="...">`)
                         $('.card-title').eq(index).html(ele.title)
                         $('.card-body').eq(index).find('a').prop('href', `news-detail.html?id=${ele.id}`) ;
                     })
