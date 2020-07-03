@@ -90,9 +90,40 @@
 
     <div class="col-4 col-sm-2 col-md-2 col-lg-2 text-center">
       <h6>联系我们</h6>
-      <img src="./dist/images/qrscan-original.png" alt="" class="mt-2">
+      <div>
+        <a href="#" class="card-link" data-toggle="modal" data-target="#exampleModal">
+          <img src="./images/feedback.png" alt="...">
+          <h6>点击反馈</h6>
+        </a>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">您的评价是对我们的支持</h5>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">邮箱:</label>
+                <input type="text" class="form-control" id="recipient-name" placeholder="email input">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">反馈信息:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+            <button type="button" class="btn btn-primary" id="alert">发送</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
   <div class="row text-center pb-2">
     <div class="col ">版权所有&copy; xxn</div>
   </div>
@@ -108,6 +139,9 @@
 <script>
 
     $(function () {
+
+
+
       function loadJS(u) {
         var r = document.getElementsByTagName("script")[0],
             s = document.createElement("script");
@@ -202,6 +236,29 @@
             console.log('error',res);
 
         })
+
+
+      var send = $('#alert')
+      send.click(function () {
+        $('.modal-body').html('')
+        $('.modal-body').html('<p  class="pheight">您的问题和建议已收到，我们会认真处理您的反馈，工作日在24小时内会给您答复，感谢您的使用！</p>')
+        const timer = setTimeout(() => {
+          console.log("jsjs")
+          $('#exampleModal').modal('hide')
+          $('.modal-body').html(`<div class="modal-body">
+                                      <form>
+                                        <div class="form-group">
+                                          <label for="recipient-name" class="col-form-label">邮箱:</label>
+                                          <input type="text" class="form-control" id="recipient-name" placeholder="email input">
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="message-text" class="col-form-label">反馈信息:</label>
+                                          <textarea class="form-control" id="message-text"></textarea>
+                                        </div>
+                                      </form>
+                                    </div>`)
+        }, 1000);
+      })
     })
 
 </script>
