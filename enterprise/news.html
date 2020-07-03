@@ -41,7 +41,7 @@
 <h2 class="h2 text-center">美食学堂</h2>
 <h5 class="h5 text-center">分享美食资讯 互动美食信息</h5>
 <div class="container">
-    <div class="row mb-3 gutter">
+    <div class="row mb-3 gutter" id='newsBox'>
         <div class="col-6 col-sm-6 col-md-4 col-lg-4">
             <div class="card mb">
               <div class="fixHeight"></div>
@@ -248,7 +248,8 @@
                 .then(function (res) {
                     var now = res.data;
                     $.each(now, function (index, ele) {
-                      console.log($('.card').eq(index).find('p'))
+                      
+                      // console.log($('.card').eq(index).find('p'))
                       //<img data-src="./dist/images/hotfood1-original.png" datasrcset="./dist/images/hotFood1-90.png 90w,./dist/images/hotfood1-180.png 180w,./dist/images/hotfood1-original.png," class="card-img-top img-fluid lazyload" alt="..." data-sizes="auto">
                         // $('.card').eq(index).find('img').prop('data-src','dist/images/news/cake1-90.png')
                         $('.card').eq(index).find('.fixHeight').html(`<img src="./images/loading.jpg"  data-original="${ele.img}" data-srcset="${ele.imgs}" class="card-img-top img-fluid lazyload" data-sizes="auto" alt="...">`)

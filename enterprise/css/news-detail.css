@@ -4,7 +4,7 @@ a {
 }
 a:hover,
 a:active {
-    color: #17a2b8;
+    color: #17a2b8  !important;
 }
 #dest {
     text-indent: 2em;
